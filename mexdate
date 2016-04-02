@@ -1,0 +1,12 @@
+#!/bin/bash
+fhour=`TZ=UTC-3 date +"%H"`
+fmin=`date +"%M"`
+tzone=`date +"%Z"`
+echo $tzone
+ghour=`TZ=UTC-2 date +"%H"`
+mhour=`TZ=UTC+6 date +"%H"`
+
+printf "Finland %2s.%2s\n" $fhour $fmin
+printf "Germany %2s.%2s\n" $ghour $fmin
+printf "Mexico  %2s.%2s\n" $mhour $fmin
+
