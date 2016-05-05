@@ -1,0 +1,15 @@
+uhour=`TZ=UTC date +"%H"`
+fhour=`TZ=UTC-3 date +"%H"`
+ghour=`TZ=UTC-2 date +"%H"`
+mhour=`TZ=UTC+5 date +"%H"`
+
+fmin=`date +"%M"`
+
+tzone=`date +"%Z"`
+#printf "TZ now  %s\n" $tzone
+
+printf "Finland %2s.%2s\n" $fhour $fmin
+printf "Germany %2s.%2s\n" $ghour $fmin
+printf "UTC     %2s.%2s\n" $uhour $fmin
+printf "Mexico  %2s.%2s\n" $mhour $fmin
+
